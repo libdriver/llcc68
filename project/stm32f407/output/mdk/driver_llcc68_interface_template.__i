@@ -1,7 +1,0 @@
--xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c
--fno-rtti -funsigned-char -fshort-enums -fshort-wchar
--gdwarf-3 -O3 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../cmsis -I ../hal/inc -I ../interface/inc -I ../usr/inc -I ../../../src -I ../../../interface -I ../../../example -I ../../../test
--ID:/Keil/Packs/Keil/STM32F4xx_DFP/2.14.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
--ID:/Keil/ARM/CMSIS/Include
--D__UVISION_VERSION="531" -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx
--o ../output/mdk/driver_llcc68_interface_template.o -MD "../../../interface/driver_llcc68_interface_template.c"

@@ -523,7 +523,7 @@ $(document).ready(function(){initNavTree('driver__llcc68_8c_source.html',''); in
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
 <div class="line"><a name="l00583"></a><span class="lineno"><a class="line" href="group__llcc68__command__driver.html#gae8ca7af0dde7fbf843916089184bff35">  583</a></span>&#160;uint8_t <a class="code" href="group__llcc68__command__driver.html#gae8ca7af0dde7fbf843916089184bff35">llcc68_init</a>(<a class="code" href="structllcc68__handle__s.html">llcc68_handle_t</a> *handle)</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;{</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    uint8_t buf[2];</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    uint8_t buf[1];</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    uint8_t prev;</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    </div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="keywordflow">if</span> (handle == NULL)                                                                    <span class="comment">/* check handle */</span></div>
@@ -642,7 +642,7 @@ $(document).ready(function(){initNavTree('driver__llcc68_8c_source.html',''); in
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        </div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        <span class="keywordflow">return</span> 6;                                                                          <span class="comment">/* return error */</span> </div>
 <div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;    }</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    handle-&gt;<a class="code" href="structllcc68__handle__s.html#a406c9433252b7366de417b7a60915c81">delay_ms</a>(10);                                                                  <span class="comment">/* delay 5 ms */</span></div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;    handle-&gt;<a class="code" href="structllcc68__handle__s.html#a406c9433252b7366de417b7a60915c81">delay_ms</a>(10);                                                                  <span class="comment">/* delay 10 ms */</span></div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    <span class="keywordflow">if</span> (handle-&gt;<a class="code" href="structllcc68__handle__s.html#af0011f96a61e36716a376f2a427fdd27">reset_gpio_write</a>(1) != 0)                                                  <span class="comment">/* set high */</span></div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    {</div>
 <div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        handle-&gt;<a class="code" href="structllcc68__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b">debug_print</a>(<span class="stringliteral">&quot;llcc68: reset chip failed.\n&quot;</span>);                               <span class="comment">/* reset chip failed */</span></div>
@@ -654,7 +654,7 @@ $(document).ready(function(){initNavTree('driver__llcc68_8c_source.html',''); in
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    }</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    handle-&gt;<a class="code" href="structllcc68__handle__s.html#a406c9433252b7366de417b7a60915c81">delay_ms</a>(5);                                                                   <span class="comment">/* delay 5 ms */</span></div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;    </div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">if</span> (a_llcc68_spi_read(handle, <a class="code" href="driver__llcc68_8c.html#af183eec48041e31262221f31dec64b9d">LLCC68_COMMAND_GET_STATUS</a>, (uint8_t *)buf, 2) != 0)      <span class="comment">/* read command */</span></div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordflow">if</span> (a_llcc68_spi_read(handle, <a class="code" href="driver__llcc68_8c.html#af183eec48041e31262221f31dec64b9d">LLCC68_COMMAND_GET_STATUS</a>, (uint8_t *)buf, 1) != 0)      <span class="comment">/* read command */</span></div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    {</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        handle-&gt;<a class="code" href="structllcc68__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b">debug_print</a>(<span class="stringliteral">&quot;llcc68: get status failed.\n&quot;</span>);                               <span class="comment">/* get status failed */</span></div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        (void)handle-&gt;<a class="code" href="structllcc68__handle__s.html#a9adb2481330acacfd7f6a04ce3310fab">spi_deinit</a>();                                                        <span class="comment">/* spi deinit */</span></div>
@@ -1124,7 +1124,7 @@ $(document).ready(function(){initNavTree('driver__llcc68_8c_source.html',''); in
 <div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;    {</div>
 <div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;        <span class="keywordflow">return</span> 0;                                                                                          <span class="comment">/* success return 0 */</span></div>
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;    }</div>
-<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((ms == 0) &amp; (handle-&gt;<a class="code" href="structllcc68__handle__s.html#a46742ea2e317c66736f27b9cb0111431">tx_done</a> == 0))                                                           <span class="comment">/* check the result */</span></div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((ms == 0) &amp;&amp; (handle-&gt;<a class="code" href="structllcc68__handle__s.html#a46742ea2e317c66736f27b9cb0111431">tx_done</a> == 0))                                                          <span class="comment">/* check the result */</span></div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;    {</div>
 <div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;        handle-&gt;<a class="code" href="structllcc68__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b">debug_print</a>(<span class="stringliteral">&quot;llcc68: sent timeout.\n&quot;</span>);                                                    <span class="comment">/* sent timeout */</span></div>
 <div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;       </div>
@@ -2521,7 +2521,7 @@ $(document).ready(function(){initNavTree('driver__llcc68_8c_source.html',''); in
 <div class="line"><a name="l03219"></a><span class="lineno"><a class="line" href="group__llcc68__command__driver.html#ga31a25661d5e9447d3b2221f250fa0675"> 3219</a></span>&#160;uint8_t <a class="code" href="group__llcc68__command__driver.html#ga31a25661d5e9447d3b2221f250fa0675">llcc68_get_status</a>(<a class="code" href="structllcc68__handle__s.html">llcc68_handle_t</a> *handle, uint8_t *status)</div>
 <div class="line"><a name="l03220"></a><span class="lineno"> 3220</span>&#160;{</div>
 <div class="line"><a name="l03221"></a><span class="lineno"> 3221</span>&#160;    uint8_t res;</div>
-<div class="line"><a name="l03222"></a><span class="lineno"> 3222</span>&#160;    uint8_t buf[2];</div>
+<div class="line"><a name="l03222"></a><span class="lineno"> 3222</span>&#160;    uint8_t buf[1];</div>
 <div class="line"><a name="l03223"></a><span class="lineno"> 3223</span>&#160;    </div>
 <div class="line"><a name="l03224"></a><span class="lineno"> 3224</span>&#160;    <span class="keywordflow">if</span> (handle == NULL)                                                                  <span class="comment">/* check handle */</span></div>
 <div class="line"><a name="l03225"></a><span class="lineno"> 3225</span>&#160;    {</div>
@@ -2540,15 +2540,15 @@ $(document).ready(function(){initNavTree('driver__llcc68_8c_source.html',''); in
 <div class="line"><a name="l03238"></a><span class="lineno"> 3238</span>&#160;        <span class="keywordflow">return</span> 4;                                                                        <span class="comment">/* return error */</span></div>
 <div class="line"><a name="l03239"></a><span class="lineno"> 3239</span>&#160;    }</div>
 <div class="line"><a name="l03240"></a><span class="lineno"> 3240</span>&#160;    </div>
-<div class="line"><a name="l03241"></a><span class="lineno"> 3241</span>&#160;    memset(buf, 0, <span class="keyword">sizeof</span>(uint8_t) * 2);                                                 <span class="comment">/* clear the buffer */</span></div>
-<div class="line"><a name="l03242"></a><span class="lineno"> 3242</span>&#160;    res = a_llcc68_spi_read(handle, <a class="code" href="driver__llcc68_8c.html#af183eec48041e31262221f31dec64b9d">LLCC68_COMMAND_GET_STATUS</a>, (uint8_t *)buf, 2);       <span class="comment">/* read command */</span></div>
+<div class="line"><a name="l03241"></a><span class="lineno"> 3241</span>&#160;    memset(buf, 0, <span class="keyword">sizeof</span>(uint8_t) * 1);                                                 <span class="comment">/* clear the buffer */</span></div>
+<div class="line"><a name="l03242"></a><span class="lineno"> 3242</span>&#160;    res = a_llcc68_spi_read(handle, <a class="code" href="driver__llcc68_8c.html#af183eec48041e31262221f31dec64b9d">LLCC68_COMMAND_GET_STATUS</a>, (uint8_t *)buf, 1);       <span class="comment">/* read command */</span></div>
 <div class="line"><a name="l03243"></a><span class="lineno"> 3243</span>&#160;    <span class="keywordflow">if</span> (res != 0)                                                                        <span class="comment">/* check result */</span></div>
 <div class="line"><a name="l03244"></a><span class="lineno"> 3244</span>&#160;    {</div>
 <div class="line"><a name="l03245"></a><span class="lineno"> 3245</span>&#160;        handle-&gt;<a class="code" href="structllcc68__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b">debug_print</a>(<span class="stringliteral">&quot;llcc68: get status failed.\n&quot;</span>);                             <span class="comment">/* get status failed */</span></div>
 <div class="line"><a name="l03246"></a><span class="lineno"> 3246</span>&#160;       </div>
 <div class="line"><a name="l03247"></a><span class="lineno"> 3247</span>&#160;        <span class="keywordflow">return</span> 1;                                                                        <span class="comment">/* return error */</span></div>
 <div class="line"><a name="l03248"></a><span class="lineno"> 3248</span>&#160;    }</div>
-<div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;    *status = buf[1];                                                                    <span class="comment">/* set status */</span></div>
+<div class="line"><a name="l03249"></a><span class="lineno"> 3249</span>&#160;    *status = buf[0];                                                                    <span class="comment">/* set status */</span></div>
 <div class="line"><a name="l03250"></a><span class="lineno"> 3250</span>&#160;    </div>
 <div class="line"><a name="l03251"></a><span class="lineno"> 3251</span>&#160;    <span class="keywordflow">return</span> 0;                                                                            <span class="comment">/* success return 0 */</span></div>
 <div class="line"><a name="l03252"></a><span class="lineno"> 3252</span>&#160;}</div>
