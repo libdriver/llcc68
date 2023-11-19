@@ -582,7 +582,7 @@ uint8_t llcc68_irq_handler(llcc68_handle_t *handle)
  */
 uint8_t llcc68_init(llcc68_handle_t *handle)
 {
-    uint8_t buf[2];
+    uint8_t buf[1];
     uint8_t prev;
     
     if (handle == NULL)                                                                    /* check handle */
@@ -701,7 +701,7 @@ uint8_t llcc68_init(llcc68_handle_t *handle)
         
         return 6;                                                                          /* return error */ 
     }
-    handle->delay_ms(10);                                                                  /* delay 5 ms */
+    handle->delay_ms(10);                                                                  /* delay 10 ms */
     if (handle->reset_gpio_write(1) != 0)                                                  /* set high */
     {
         handle->debug_print("llcc68: reset chip failed.\n");                               /* reset chip failed */
@@ -713,7 +713,7 @@ uint8_t llcc68_init(llcc68_handle_t *handle)
     }
     handle->delay_ms(5);                                                                   /* delay 5 ms */
     
-    if (a_llcc68_spi_read(handle, LLCC68_COMMAND_GET_STATUS, (uint8_t *)buf, 2) != 0)      /* read command */
+    if (a_llcc68_spi_read(handle, LLCC68_COMMAND_GET_STATUS, (uint8_t *)buf, 1) != 0)      /* read command */
     {
         handle->debug_print("llcc68: get status failed.\n");                               /* get status failed */
         (void)handle->spi_deinit();                                                        /* spi deinit */
@@ -3219,7 +3219,7 @@ uint8_t llcc68_set_lora_symb_num_timeout(llcc68_handle_t *handle, uint8_t symb_n
 uint8_t llcc68_get_status(llcc68_handle_t *handle, uint8_t *status)
 {
     uint8_t res;
-    uint8_t buf[2];
+    uint8_t buf[1];
     
     if (handle == NULL)                                                                  /* check handle */
     {
@@ -3238,15 +3238,15 @@ uint8_t llcc68_get_status(llcc68_handle_t *handle, uint8_t *status)
         return 4;                                                                        /* return error */
     }
     
-    memset(buf, 0, sizeof(uint8_t) * 2);                                                 /* clear the buffer */
-    res = a_llcc68_spi_read(handle, LLCC68_COMMAND_GET_STATUS, (uint8_t *)buf, 2);       /* read command */
+    memset(buf, 0, sizeof(uint8_t) * 1);                                                 /* clear the buffer */
+    res = a_llcc68_spi_read(handle, LLCC68_COMMAND_GET_STATUS, (uint8_t *)buf, 1);       /* read command */
     if (res != 0)                                                                        /* check result */
     {
         handle->debug_print("llcc68: get status failed.\n");                             /* get status failed */
        
         return 1;                                                                        /* return error */
     }
-    *status = buf[1];                                                                    /* set status */
+    *status = buf[0];                                                                    /* set status */
     
     return 0;                                                                            /* success return 0 */
 }
