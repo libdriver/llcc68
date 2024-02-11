@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver LLCC68
- * @brief     libdriver llcc68 is a full function driver of llcc68 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver LLCC68 is a full function driver of LLCC68 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
