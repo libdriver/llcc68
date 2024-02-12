@@ -50,6 +50,8 @@ LibDriver LLCC68是LibDriver推出的LLCC68全功能驱动，提供无线发送�
 
 ### 使用
 
+您可以参考/example目录下的编程范例完成适合您的驱动，如果您想要使用默认的编程范例，以下是它们的使用方法。
+
 #### example basic sent
 
 ```C
