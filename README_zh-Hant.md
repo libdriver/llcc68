@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/llcc68/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-LLCC68 sub-GHz無線電收發器是遠程無線應用的理想選擇。 LLCC68可通過高效集成功率放大器傳輸高達+22 dBm的功率。 LLCC68支持LPWAN使用情况下的LoRa ® 調製，支持傳統使用情况下（G）FSK調製。 它可高度配寘，以滿足工業和消費者使用的不同應用要求。 該設備提供與LoRaWAN使用的Semtech收發器相容的LoRa ® 調製 ™  LoRa聯盟發佈的規範 ™. 該無線電適用於目標符合無線電法規的系統，包括但不限於ETSI EN 300 220、FCC CFR 47第15部分、中國法規要求和日本ARIB T-108。 從150 MHz到960 MHz的連續頻率覆蓋允許支持全球所有主要的亞GHz ISM頻段。 LCC68可用於智慧電錶、供應鏈和物流、樓宇自動化等。
+LLCC68 sub-GHz無線電收發器是遠程無線應用的理想選擇。 LLCC68可通過高效集成功率放大器傳輸高達+22 dBm的功率。 LLCC68支持LPWAN使用情况下的LoRa ® 調製，支持傳統使用情况下（G）FSK調製。 它可高度配寘，以滿足工業和消費者使用的不同應用要求。 該設備提供與LoRaWAN使用的Semtech收發器相容的LoRa ® 調製 ™  LoRa聯盟發佈的規範 ™. 該無線電適用於目標符合無線電法規的系統，包括但不限於ETSI EN 300 220、FCC CFR 47第15部分、中國法規要求和日本ARIB T-108。 從150 MHz到960 MHz的連續頻率覆蓋允許支持全球所有主要的Sub GHz ISM頻段。 LCC68可用於智慧電錶、供應鏈和物流、樓宇自動化等。
 
 LibDriver LLCC68是LibDriver推出的LLCC68全功能驅動，提供無線發送、無線接收、cad等功能並且它符合MISRA標準。
 

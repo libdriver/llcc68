@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/llcc68/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-LLCC68 sub-GHz无线电收发器是远程无线应用的理想选择。LLCC68可通过高效集成功率放大器传输高达+22 dBm的功率。LLCC68支持LPWAN使用情况下的LoRa®调制，支持传统使用情况下（G）FSK调制。它可高度配置，以满足工业和消费者使用的不同应用要求。该设备提供与LoRaWAN使用的Semtech收发器兼容的LoRa®调制™ LoRa联盟发布的规范™.该无线电适用于目标符合无线电法规的系统，包括但不限于ETSI EN 300 220、FCC CFR 47第15部分、中国法规要求和日本ARIB T-108。从150 MHz到960 MHz的连续频率覆盖允许支持全球所有主要的亚GHz ISM频段。LCC68可用于智能电表、供应链和物流、楼宇自动化等。
+LLCC68 sub-GHz无线电收发器是远程无线应用的理想选择。LLCC68可通过高效集成功率放大器传输高达+22 dBm的功率。LLCC68支持LPWAN使用情况下的LoRa®调制，支持传统使用情况下（G）FSK调制。它可高度配置，以满足工业和消费者使用的不同应用要求。该设备提供与LoRaWAN使用的Semtech收发器兼容的LoRa®调制™ LoRa联盟发布的规范™.该无线电适用于目标符合无线电法规的系统，包括但不限于ETSI EN 300 220、FCC CFR 47第15部分、中国法规要求和日本ARIB T-108。从150 MHz到960 MHz的连续频率覆盖允许支持全球所有主要的Sub GHz ISM频段。LCC68可用于智能电表、供应链和物流、楼宇自动化等。
 
 LibDriver LLCC68是LibDriver推出的LLCC68全功能驱动，提供无线发送、无线接收、cad等功能并且它符合MISRA标准。
 
