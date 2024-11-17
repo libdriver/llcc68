@@ -346,7 +346,7 @@ typedef enum
     LLCC68_FSK_RX_STATUS_LENGTH_ERR   = (1 << 3),        /**< length err */
     LLCC68_FSK_RX_STATUS_ABORT_ERR    = (1 << 2),        /**< abort err */
     LLCC68_FSK_RX_STATUS_PKT_RECEIVED = (1 << 1),        /**< pkt received */
-    LLCC68_FSK_RX_STATUS_PKT_SENT     = (1 << 0),        /**< pkt sent */
+    LLCC68_FSK_RX_STATUS_PKT_SEND     = (1 << 0),        /**< pkt send */
 } llcc68_fsk_rx_status_t;
 
 /**
@@ -589,7 +589,7 @@ uint8_t llcc68_init(llcc68_handle_t *handle);
 uint8_t llcc68_deinit(llcc68_handle_t *handle);
 
 /**
- * @brief     sent the lora data
+ * @brief     send the lora data
  * @param[in] *handle points to an llcc68 handle structure
  * @param[in] standby_src is the clock source
  * @param[in] preamble_length is the preamble length
@@ -601,11 +601,11 @@ uint8_t llcc68_deinit(llcc68_handle_t *handle);
  * @param[in] us is the timeout
  * @return    status code
  *            - 0 success
- *            - 1 sent failed
+ *            - 1 send failed
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 chip is busy
- *            - 5 sent timeout
+ *            - 5 send timeout
  *            - 6 irq timeout
  *            - 7 unknown result
  * @note      none

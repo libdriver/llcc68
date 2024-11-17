@@ -35,7 +35,7 @@
  */
 
 #include "driver_llcc68_register_test.h"
-#include "driver_llcc68_sent_receive_test.h"
+#include "driver_llcc68_send_receive_test.h"
 #include "driver_llcc68_cad_test.h"
 #include "driver_llcc68_lora.h"
 #include "gpio.h"
@@ -299,7 +299,7 @@ uint8_t llcc68(uint8_t argc, char **argv)
         
         return 0;
     }
-    else if (strcmp("t_lora-sent", type) == 0)
+    else if (strcmp("t_lora-send", type) == 0)
     {
         uint8_t res;
         
@@ -313,8 +313,8 @@ uint8_t llcc68(uint8_t argc, char **argv)
         /* set gpio irq */
         g_gpio_irq = llcc68_interrupt_test_irq_handler;
         
-        /* run sent test */
-        res = llcc68_sent_test();
+        /* run send test */
+        res = llcc68_send_test();
         if (res != 0)
         {
             (void)gpio_interrupt_deinit();
@@ -389,7 +389,7 @@ uint8_t llcc68(uint8_t argc, char **argv)
         
         return 0;
     }
-    else if (strcmp("e_lora-sent", type) == 0)
+    else if (strcmp("e_lora-send", type) == 0)
     {
         uint8_t res;
         
@@ -413,8 +413,8 @@ uint8_t llcc68(uint8_t argc, char **argv)
             return 1;
         }
         
-        /* set sent mode */
-        res = llcc68_lora_set_sent_mode();
+        /* set send mode */
+        res = llcc68_lora_set_send_mode();
         if (res != 0)
         {
             (void)llcc68_lora_deinit();
@@ -425,10 +425,10 @@ uint8_t llcc68(uint8_t argc, char **argv)
         }
         
         /* output */
-        llcc68_interface_debug_print("llcc68: sent %s.\n", data);
+        llcc68_interface_debug_print("llcc68: send %s.\n", data);
         
-        /* sent data */
-        res = llcc68_lora_sent((uint8_t *)data, (uint16_t)strlen(data));
+        /* send data */
+        res = llcc68_lora_send((uint8_t *)data, (uint16_t)strlen(data));
         if (res != 0)
         {
             (void)llcc68_lora_deinit();
@@ -646,10 +646,10 @@ uint8_t llcc68(uint8_t argc, char **argv)
         llcc68_interface_debug_print("  llcc68 (-h | --help)\n");
         llcc68_interface_debug_print("  llcc68 (-p | --port)\n");
         llcc68_interface_debug_print("  llcc68 (-t reg | --test=reg)\n");
-        llcc68_interface_debug_print("  llcc68 (-t lora-sent | --test=lora-sent)\n");
+        llcc68_interface_debug_print("  llcc68 (-t lora-send | --test=lora-send)\n");
         llcc68_interface_debug_print("  llcc68 (-t lora-receive | --test=lora-receive) [--timeout=<time>]\n");
         llcc68_interface_debug_print("  llcc68 (-t lora-cad | --test=lora-cad)\n");
-        llcc68_interface_debug_print("  llcc68 (-e lora-sent | --example=lora-sent) [--data=<str>]\n");
+        llcc68_interface_debug_print("  llcc68 (-e lora-send | --example=lora-send) [--data=<str>]\n");
         llcc68_interface_debug_print("  llcc68 (-e lora-receive | --example=lora-receive) [--timeout=<time>]\n");
         llcc68_interface_debug_print("  llcc68 (-e lora-cad | --example=lora-cad)\n");
         llcc68_interface_debug_print("  llcc68 (-e lora-sleep | --example=lora-sleep)\n");
@@ -657,13 +657,13 @@ uint8_t llcc68(uint8_t argc, char **argv)
         llcc68_interface_debug_print("\n");
         llcc68_interface_debug_print("Options:\n");
         llcc68_interface_debug_print("      --data=<str>            Set the send data.([default: LibDriver])\n");
-        llcc68_interface_debug_print("  -e <lora-sent | lora-receive | lora-cad | lora-sleep | lora-wake-up>, --example=<lora-sent\n");
+        llcc68_interface_debug_print("  -e <lora-send | lora-receive | lora-cad | lora-sleep | lora-wake-up>, --example=<lora-send\n");
         llcc68_interface_debug_print("     | lora-receive | lora-cad | lora-sleep | lora-wake-up>\n");
         llcc68_interface_debug_print("                              Run the driver example.\n");
         llcc68_interface_debug_print("  -h, --help                  Show the help.\n");
         llcc68_interface_debug_print("  -i, --information           Show the chip information.\n");
         llcc68_interface_debug_print("  -p, --port                  Display the pin connections of the current board.\n");
-        llcc68_interface_debug_print("  -t <reg | lora-sent | lora-receive | lora-cad>, --test=<reg | lora-sent | lora-receive | lora-cad>\n");
+        llcc68_interface_debug_print("  -t <reg | lora-send | lora-receive | lora-cad>, --test=<reg | lora-send | lora-receive | lora-cad>\n");
         llcc68_interface_debug_print("                              Run the driver test.\n");
         llcc68_interface_debug_print("      --timeout=<time>        Set the timeout in ms.([default: 1000])\n");
 

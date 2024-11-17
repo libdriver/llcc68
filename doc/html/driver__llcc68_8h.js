@@ -40,7 +40,7 @@ var driver__llcc68_8h =
       [ "LLCC68_FSK_RX_STATUS_LENGTH_ERR", "group__llcc68__command__driver.html#gga60dd163ca94d90c0f08832e7efb7b4f4a44f79d401e9178b3ee04bae202005aeb", null ],
       [ "LLCC68_FSK_RX_STATUS_ABORT_ERR", "group__llcc68__command__driver.html#gga60dd163ca94d90c0f08832e7efb7b4f4a5a04aa06b054ab6ebd02215658348519", null ],
       [ "LLCC68_FSK_RX_STATUS_PKT_RECEIVED", "group__llcc68__command__driver.html#gga60dd163ca94d90c0f08832e7efb7b4f4a1ef5e8e0cc97f8abbb67547dfe5202f7", null ],
-      [ "LLCC68_FSK_RX_STATUS_PKT_SENT", "group__llcc68__command__driver.html#gga60dd163ca94d90c0f08832e7efb7b4f4a1af8f3b59484a3936ffd9a610db06395", null ]
+      [ "LLCC68_FSK_RX_STATUS_PKT_SEND", "group__llcc68__command__driver.html#gga60dd163ca94d90c0f08832e7efb7b4f4a9f521aa233e4a744a643da20ef9929de", null ]
     ] ],
     [ "llcc68_gfsk_addr_filter_t", "group__llcc68__command__driver.html#gac44b443df4b0388d8a933d4bc031ba88", [
       [ "LLCC68_GFSK_ADDR_FILTER_DISABLE", "group__llcc68__command__driver.html#ggac44b443df4b0388d8a933d4bc031ba88a0b0c5309b927fd978cbfb6d69676c3dc", null ],

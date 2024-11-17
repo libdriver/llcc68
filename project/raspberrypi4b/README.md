@@ -104,10 +104,10 @@ find_package(llcc68 REQUIRED)
    llcc68 (-t reg | --test=reg)
    ```
 
-5. Run llcc68 sent test.
+5. Run llcc68 send test.
 
    ```shell
-   llcc68 (-t lora-sent | --test=lora-sent)
+   llcc68 (-t lora-send | --test=lora-send)
    ```
 
 6. Run llcc68 receive test, time is the received timeout in second. 
@@ -122,10 +122,10 @@ find_package(llcc68 REQUIRED)
    llcc68 (-t lora-cad | --test=lora-cad)
    ```
 
-8. Run llcc68  sent function, str is the send data.
+8. Run llcc68  send function, str is the send data.
 
    ```shell
-   llcc68 (-e lora-sent | --example=lora-sent) [--data=<str>]
+   llcc68 (-e lora-send | --example=lora-send) [--data=<str>]
    ```
 
 9. Run llcc68 receive function, time is the received timeout in second. 
@@ -285,11 +285,11 @@ llcc68: finish register test.
 ```
 
 ```shell
-./llcc68 -t lora-sent
+./llcc68 -t lora-send
 
-llcc68: start sent test.
+llcc68: start send test.
 llcc68: irq tx done.
-llcc68: finish sent test.
+llcc68: finish send test.
 ```
 
 ```shell
@@ -317,9 +317,9 @@ llcc68: finish cad test.
 ```
 
 ```shell
-./llcc68 -e lora-sent --data=LibDriver
+./llcc68 -e lora-send --data=LibDriver
 
-llcc68: sent LibDriver.
+llcc68: send LibDriver.
 llcc68: irq tx done.
 ```
 
@@ -360,10 +360,10 @@ Usage:
   llcc68 (-h | --help)
   llcc68 (-p | --port)
   llcc68 (-t reg | --test=reg)
-  llcc68 (-t lora-sent | --test=lora-sent)
+  llcc68 (-t lora-send | --test=lora-send)
   llcc68 (-t lora-receive | --test=lora-receive) [--timeout=<time>]
   llcc68 (-t lora-cad | --test=lora-cad)
-  llcc68 (-e lora-sent | --example=lora-sent) [--data=<str>]
+  llcc68 (-e lora-send | --example=lora-send) [--data=<str>]
   llcc68 (-e lora-receive | --example=lora-receive) [--timeout=<time>]
   llcc68 (-e lora-cad | --example=lora-cad)
   llcc68 (-e lora-sleep | --example=lora-sleep)
@@ -371,13 +371,13 @@ Usage:
 
 Options:
       --data=<str>            Set the send data.([default: LibDriver])
-  -e <lora-sent | lora-receive | lora-cad | lora-sleep | lora-wake-up>, --example=<lora-sent
+  -e <lora-send | lora-receive | lora-cad | lora-sleep | lora-wake-up>, --example=<lora-send
      | lora-receive | lora-cad | lora-sleep | lora-wake-up>
                               Run the driver example.
   -h, --help                  Show the help.
   -i, --information           Show the chip information.
   -p, --port                  Display the pin connections of the current board.
-  -t <reg | lora-sent | lora-receive | lora-cad>, --test=<reg | lora-sent | lora-receive | lora-cad>
+  -t <reg | lora-send | lora-receive | lora-cad>, --test=<reg | lora-send | lora-receive | lora-cad>
                               Run the driver test.
       --timeout=<time>        Set the timeout in ms.([default: 1000])
 ```

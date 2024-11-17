@@ -21,8 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  *
- * @file      driver_llcc68_sent_receive_test.c
- * @brief     driver llcc68 sent receive test source file
+ * @file      driver_llcc68_send_receive_test.c
+ * @brief     driver llcc68 send receive test source file
  * @version   1.0.0
  * @author    Shifeng Li
  * @date      2023-04-15
@@ -34,11 +34,11 @@
  * </table>
  */
 
-#include "driver_llcc68_sent_receive_test.h"
+#include "driver_llcc68_send_receive_test.h"
 
 static llcc68_handle_t gs_handle;        /**< llcc68 handle */
 static uint8_t gs_rx_done;               /**< rx done */
-static uint8_t gs_sent_buffer[256];      /**< inner sent buffer*/
+static uint8_t gs_send_buffer[256];      /**< inner send buffer*/
 
 /**
  * @brief     interface receive callback
@@ -173,13 +173,13 @@ uint8_t llcc68_interrupt_test_irq_handler(void)
 }
 
 /**
- * @brief  sent test
+ * @brief  send test
  * @return status code
  *         - 0 success
  *         - 1 test failed
  * @note   none
  */
-uint8_t llcc68_sent_test(void)
+uint8_t llcc68_send_test(void)
 {
     uint8_t res;
     uint32_t reg;
@@ -202,8 +202,8 @@ uint8_t llcc68_sent_test(void)
     DRIVER_LLCC68_LINK_DEBUG_PRINT(&gs_handle, llcc68_interface_debug_print);
     DRIVER_LLCC68_LINK_RECEIVE_CALLBACK(&gs_handle, llcc68_interface_receive_callback);
     
-    /* start sent test */
-    llcc68_interface_debug_print("llcc68: start sent test.\n");
+    /* start send test */
+    llcc68_interface_debug_print("llcc68: start send test.\n");
     
     /* init the llcc68 */
     res = llcc68_init(&gs_handle);
@@ -450,24 +450,24 @@ uint8_t llcc68_sent_test(void)
     /* generate the buffer */
     for (i = 0; i < 192; i++)
     {
-        gs_sent_buffer[i] = i;
+        gs_send_buffer[i] = i;
     }
     
-    /* sent the data */
+    /* send the data */
     res = llcc68_lora_transmit(&gs_handle, LLCC68_CLOCK_SOURCE_XTAL_32MHZ,
                                50, LLCC68_LORA_HEADER_EXPLICIT,
                                LLCC68_LORA_CRC_TYPE_ON, LLCC68_BOOL_FALSE,
-                              (uint8_t *)gs_sent_buffer, 192, 0);
+                              (uint8_t *)gs_send_buffer, 192, 0);
     if (res != 0)
     {
-        llcc68_interface_debug_print("llcc68: lora sent failed.\n");
+        llcc68_interface_debug_print("llcc68: lora send failed.\n");
         (void)llcc68_deinit(&gs_handle);
         
         return 1;
     }
     
-    /* finish sent test */
-    llcc68_interface_debug_print("llcc68: finish sent test.\n");
+    /* finish send test */
+    llcc68_interface_debug_print("llcc68: finish send test.\n");
     
     /* deinit */
     (void)llcc68_deinit(&gs_handle);

@@ -17,7 +17,7 @@ LibDriver LLCC68 ist der Treiber mit vollem Funktionsumfang von LLCC68, der von 
   - [Anweisung](#Anweisung)
   - [Installieren](#Installieren)
   - [Nutzung](#Nutzung)
-    - [example basic sent](#example-basic-sent)
+    - [example basic send](#example-basic-send)
     - [example basic receive](#example-basic-receive)
   - [Dokument](#Dokument)
   - [Beitrag](#Beitrag)
@@ -52,7 +52,7 @@ Fügen Sie das Verzeichnis /src, den Schnittstellentreiber für Ihre Plattform u
 
 Sie können auf die Beispiele im Verzeichnis /example zurückgreifen, um Ihren eigenen Treiber zu vervollständigen. Wenn Sie die Standardprogrammierbeispiele verwenden möchten, erfahren Sie hier, wie Sie diese verwenden.
 
-#### example basic sent
+#### example basic send
 
 ```C
 #include "driver_llcc68_lora.h"
@@ -181,8 +181,8 @@ if (res != 0)
 
 }
 
-/* set sent mode */
-res = llcc68_lora_set_sent_mode();
+/* set send mode */
+res = llcc68_lora_set_send_mode();
 if (res != 0)
 {
     (void)llcc68_lora_deinit();
@@ -193,10 +193,10 @@ if (res != 0)
 
 }
 
-llcc68_interface_debug_print("llcc68: sent %s.\n", "123");
+llcc68_interface_debug_print("llcc68: send %s.\n", "123");
 
-/* sent data */
-res = llcc68_lora_sent((uint8_t *)"123", strlen("123"));
+/* send data */
+res = llcc68_lora_send((uint8_t *)"123", strlen("123"));
 if (res != 0)
 {
     (void)llcc68_lora_deinit();
@@ -225,7 +225,7 @@ return 0;
 
 #### example basic receive
 
-```c
+```C
 #include "driver_llcc68_lora.h"
 
 uint8_t (*g_gpio_irq)(void) = NULL;
