@@ -58,7 +58,7 @@ extern "C"{
 uint8_t llcc68_cad_test_irq_handler(void);
 
 /**
- * @brief  sent test
+ * @brief  send test
  * @return status code
  *         - 0 success
  *         - 1 test failed

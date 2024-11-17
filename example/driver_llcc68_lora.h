@@ -126,24 +126,24 @@ uint8_t llcc68_lora_set_continuous_receive_mode(void);
 uint8_t llcc68_lora_set_shot_receive_mode(double us);
 
 /**
- * @brief  lora example enter to the sent mode
+ * @brief  lora example enter to the send mode
  * @return status code
  *         - 0 success
  *         - 1 enter failed
  * @note   none
  */
-uint8_t llcc68_lora_set_sent_mode(void);
+uint8_t llcc68_lora_set_send_mode(void);
 
 /**
- * @brief     lora example sent lora data
+ * @brief     lora example send lora data
  * @param[in] *buf points to a data buffer
  * @param[in] len is the data length
  * @return    status code
  *            - 0 success
- *            - 1 sent failed
+ *            - 1 send failed
  * @note      none
  */
-uint8_t llcc68_lora_sent(uint8_t *buf, uint16_t len);
+uint8_t llcc68_lora_send(uint8_t *buf, uint16_t len);
 
 /**
  * @brief      lora example run the cad

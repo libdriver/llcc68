@@ -512,13 +512,13 @@ uint8_t llcc68_lora_set_shot_receive_mode(double us)
 }
 
 /**
- * @brief  lora example enter to the sent mode
+ * @brief  lora example enter to the send mode
  * @return status code
  *         - 0 success
  *         - 1 enter failed
  * @note   none
  */
-uint8_t llcc68_lora_set_sent_mode(void)
+uint8_t llcc68_lora_set_send_mode(void)
 {
     /* set dio irq */
     if (llcc68_set_dio_irq_params(&gs_handle, LLCC68_IRQ_TX_DONE | LLCC68_IRQ_TIMEOUT | LLCC68_IRQ_CAD_DONE | LLCC68_IRQ_CAD_DETECTED,
@@ -538,17 +538,17 @@ uint8_t llcc68_lora_set_sent_mode(void)
 }
 
 /**
- * @brief     lora example sent lora data
+ * @brief     lora example send lora data
  * @param[in] *buf points to a data buffer
  * @param[in] len is the data length
  * @return    status code
  *            - 0 success
- *            - 1 sent failed
+ *            - 1 send failed
  * @note      none
  */
-uint8_t llcc68_lora_sent(uint8_t *buf, uint16_t len)
+uint8_t llcc68_lora_send(uint8_t *buf, uint16_t len)
 {
-    /* sent the data */
+    /* send the data */
     if (llcc68_lora_transmit(&gs_handle, LLCC68_CLOCK_SOURCE_XTAL_32MHZ,
                              LLCC68_LORA_DEFAULT_PREAMBLE_LENGTH, LLCC68_LORA_DEFAULT_HEADER,
                              LLCC68_LORA_DEFAULT_CRC_TYPE, LLCC68_LORA_DEFAULT_INVERT_IQ,

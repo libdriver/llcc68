@@ -17,7 +17,7 @@ LibDriver LLCC68은 LibDriver에서 출시한 LLCC68의 전체 기능 드라이�
   - [설명](#설명)
   - [설치](#설치)
   - [사용](#사용)
-    - [example basic sent](#example-basic-sent)
+    - [example basic send](#example-basic-send)
     - [example basic receive](#example-basic-receive)
   - [문서](#문서)
   - [기고](#기고)
@@ -52,7 +52,7 @@ LibDriver LLCC68은 LibDriver에서 출시한 LLCC68의 전체 기능 드라이�
 
 /example 디렉터리의 예제를 참조하여 자신만의 드라이버를 완성할 수 있습니다. 기본 프로그래밍 예제를 사용하려는 경우 사용 방법은 다음과 같습니다.
 
-#### example basic sent
+#### example basic send
 
 ```C
 #include "driver_llcc68_lora.h"
@@ -181,8 +181,8 @@ if (res != 0)
 
 }
 
-/* set sent mode */
-res = llcc68_lora_set_sent_mode();
+/* set send mode */
+res = llcc68_lora_set_send_mode();
 if (res != 0)
 {
     (void)llcc68_lora_deinit();
@@ -193,10 +193,10 @@ if (res != 0)
 
 }
 
-llcc68_interface_debug_print("llcc68: sent %s.\n", "123");
+llcc68_interface_debug_print("llcc68: send %s.\n", "123");
 
-/* sent data */
-res = llcc68_lora_sent((uint8_t *)"123", strlen("123"));
+/* send data */
+res = llcc68_lora_send((uint8_t *)"123", strlen("123"));
 if (res != 0)
 {
     (void)llcc68_lora_deinit();

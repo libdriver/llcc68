@@ -17,7 +17,7 @@ LibDriver LLCC68是LibDriver推出的LLCC68全功能驱动，提供无线发送�
   - [说明](#说明)
   - [安装](#安装)
   - [使用](#使用)
-    - [example basic sent](#example-basic-sent)
+    - [example basic send](#example-basic-send)
     - [example basic receive](#example-basic-receive)
   - [文档](#文档)
   - [贡献](#贡献)
@@ -52,7 +52,7 @@ LibDriver LLCC68是LibDriver推出的LLCC68全功能驱动，提供无线发送�
 
 您可以参考/example目录下的编程范例完成适合您的驱动，如果您想要使用默认的编程范例，以下是它们的使用方法。
 
-#### example basic sent
+#### example basic send
 
 ```C
 #include "driver_llcc68_lora.h"
@@ -181,8 +181,8 @@ if (res != 0)
 
 }
 
-/* set sent mode */
-res = llcc68_lora_set_sent_mode();
+/* set send mode */
+res = llcc68_lora_set_send_mode();
 if (res != 0)
 {
     (void)llcc68_lora_deinit();
@@ -193,10 +193,10 @@ if (res != 0)
 
 }
 
-llcc68_interface_debug_print("llcc68: sent %s.\n", "123");
+llcc68_interface_debug_print("llcc68: send %s.\n", "123");
 
-/* sent data */
-res = llcc68_lora_sent((uint8_t *)"123", strlen("123"));
+/* send data */
+res = llcc68_lora_send((uint8_t *)"123", strlen("123"));
 if (res != 0)
 {
     (void)llcc68_lora_deinit();

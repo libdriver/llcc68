@@ -21,8 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE. 
  *
- * @file      driver_llcc68_sent_receive_test.h
- * @brief     driver llcc68 sent receive test header file
+ * @file      driver_llcc68_send_receive_test.h
+ * @brief     driver llcc68 send receive test header file
  * @version   1.0.0
  * @author    Shifeng Li
  * @date      2023-04-15
@@ -34,8 +34,8 @@
  * </table>
  */
 
-#ifndef DRIVER_LLCC68_SENT_RECEIVE_TEST_H
-#define DRIVER_LLCC68_SENT_RECEIVE_TEST_H
+#ifndef DRIVER_LLCC68_SEND_RECEIVE_TEST_H
+#define DRIVER_LLCC68_SEND_RECEIVE_TEST_H
 
 #include "driver_llcc68_interface.h"
 
@@ -58,13 +58,13 @@ extern "C"{
 uint8_t llcc68_interrupt_test_irq_handler(void);
 
 /**
- * @brief  sent test
+ * @brief  send test
  * @return status code
  *         - 0 success
  *         - 1 test failed
  * @note   none
  */
-uint8_t llcc68_sent_test(void);
+uint8_t llcc68_send_test(void);
 
 /**
  * @brief     receive test
