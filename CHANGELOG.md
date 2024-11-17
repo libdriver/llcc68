@@ -1,3 +1,9 @@
+## 1.0.5 (2024-11-18)
+
+## Bug Fixes
+
+- fix project errors
+
 ## 1.0.4 (2024-11-17)
 
 ## Bug Fixes
