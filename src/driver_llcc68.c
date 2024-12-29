@@ -136,10 +136,10 @@
 
 /**
  * @brief      read bytes
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  reg is the register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  reg register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 spi read failed
@@ -159,10 +159,10 @@ static uint8_t a_llcc68_spi_read(llcc68_handle_t *handle, uint8_t reg, uint8_t *
 
 /**
  * @brief     write bytes
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] reg is the register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] reg register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 spi write failed
@@ -193,10 +193,10 @@ static uint8_t a_llcc68_spi_write(llcc68_handle_t *handle, uint8_t reg, uint8_t 
 
 /**
  * @brief      read register bytes
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  reg is the register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  reg register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 spi read register failed
@@ -232,10 +232,10 @@ static uint8_t a_llcc68_spi_read_register(llcc68_handle_t *handle, uint16_t reg,
 
 /**
  * @brief     write register bytes
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] reg is the register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] reg register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 spi write register failed
@@ -268,10 +268,10 @@ static uint8_t a_llcc68_spi_write_register(llcc68_handle_t *handle, uint16_t reg
 
 /**
  * @brief     write buffer
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] offset is the buffer offset
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] offset buffer offset
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 spi write buffer failed
@@ -303,10 +303,10 @@ static uint8_t a_llcc68_spi_write_buffer(llcc68_handle_t *handle, uint8_t offset
 
 /**
  * @brief      read buffer
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  offset is the buffer offset
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  offset buffer offset
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 spi read buffer failed
@@ -341,7 +341,7 @@ static uint8_t a_llcc68_spi_read_buffer(llcc68_handle_t *handle, uint8_t offset,
 
 /**
  * @brief     check command busy
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 idle
  *            - 1 busy or error
@@ -389,7 +389,7 @@ static uint8_t a_llcc68_check_busy(llcc68_handle_t *handle)
 
 /**
  * @brief     irq handler
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -569,7 +569,7 @@ uint8_t llcc68_irq_handler(llcc68_handle_t *handle)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -739,7 +739,7 @@ uint8_t llcc68_init(llcc68_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -808,8 +808,8 @@ uint8_t llcc68_deinit(llcc68_handle_t *handle)
 
 /**
  * @brief     enter to the single receive mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] us is the rx timeout
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] us rx timeout
  * @return    status code
  *            - 0 success
  *            - 1 lora single receive failed
@@ -878,7 +878,7 @@ uint8_t llcc68_single_receive(llcc68_handle_t *handle, double us)
 
 /**
  * @brief     enter to the continuous receive mode
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 lora continuous receive failed
@@ -945,8 +945,8 @@ uint8_t llcc68_continuous_receive(llcc68_handle_t *handle)
 
 /**
  * @brief      run the cad
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *enable points to an enable buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *enable pointer to an enable buffer
  * @return     status code
  *             - 0 success
  *             - 1 lora cad failed
@@ -1035,8 +1035,8 @@ uint8_t llcc68_lora_cad(llcc68_handle_t *handle, llcc68_bool_t *enable)
 
 /**
  * @brief      check the packet error
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *enable points to a bool buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *enable pointer to a bool buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -1061,15 +1061,15 @@ uint8_t llcc68_check_packet_error(llcc68_handle_t *handle, llcc68_bool_t *enable
 
 /**
  * @brief     send the lora data
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] standby_src is the clock source
- * @param[in] preamble_length is the preamble length
- * @param[in] header_type is the header type
- * @param[in] crc_type is the crc type
- * @param[in] invert_iq_enable is a bool value
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
- * @param[in] us is the timeout
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] standby_src clock source
+ * @param[in] preamble_length preamble length
+ * @param[in] header_type header type
+ * @param[in] crc_type crc type
+ * @param[in] invert_iq_enable bool value
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
+ * @param[in] us timeout
  * @return    status code
  *            - 0 success
  *            - 1 send failed
@@ -1287,10 +1287,10 @@ uint8_t llcc68_lora_transmit(llcc68_handle_t *handle, llcc68_clock_source_t stan
 
 /**
  * @brief     write the register
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] reg is the register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] reg register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write register failed
@@ -1332,10 +1332,10 @@ uint8_t llcc68_write_register(llcc68_handle_t *handle, uint16_t reg, uint8_t *bu
 
 /**
  * @brief      read the register
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  reg is the register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  reg register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read register failed
@@ -1377,10 +1377,10 @@ uint8_t llcc68_read_register(llcc68_handle_t *handle, uint16_t reg, uint8_t *buf
 
 /**
  * @brief     write the buffer
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] offset is the buffer offset
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] offset buffer offset
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 write buffer failed
@@ -1422,10 +1422,10 @@ uint8_t llcc68_write_buffer(llcc68_handle_t *handle, uint8_t offset, uint8_t *bu
 
 /**
  * @brief      read the buffer
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  offset is the buffer offset
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  offset buffer offset
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read buffer failed
@@ -1467,9 +1467,9 @@ uint8_t llcc68_read_buffer(llcc68_handle_t *handle, uint8_t offset, uint8_t *buf
 
 /**
  * @brief     enter to the sleep mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] mode is the start mode
- * @param[in] rtc_wake_up_enable is a bool value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] mode start mode
+ * @param[in] rtc_wake_up_enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set sleep failed
@@ -1514,8 +1514,8 @@ uint8_t llcc68_set_sleep(llcc68_handle_t *handle, llcc68_start_mode_t mode, llcc
 
 /**
  * @brief     enter to the standby mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] src is the clock source
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] src clock source
  * @return    status code
  *            - 0 success
  *            - 1 set standby failed
@@ -1560,7 +1560,7 @@ uint8_t llcc68_set_standby(llcc68_handle_t *handle, llcc68_clock_source_t src)
 
 /**
  * @brief     enter to the frequency synthesis mode
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set frequency synthesis failed
@@ -1603,8 +1603,8 @@ uint8_t llcc68_set_frequency_synthesis(llcc68_handle_t *handle)
 
 /**
  * @brief     enter to the tx mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] timeout is the tx timeout
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] timeout tx timeout
  * @return    status code
  *            - 0 success
  *            - 1 set tx failed
@@ -1651,8 +1651,8 @@ uint8_t llcc68_set_tx(llcc68_handle_t *handle, uint32_t timeout)
 
 /**
  * @brief     enter to the rx mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] timeout is the rx timeout
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] timeout rx timeout
  * @return    status code
  *            - 0 success
  *            - 1 set rx failed
@@ -1700,9 +1700,9 @@ uint8_t llcc68_set_rx(llcc68_handle_t *handle, uint32_t timeout)
 
 /**
  * @brief      convert the timeout to the register raw data
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  us is the timeout
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  us timeout
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -1727,9 +1727,9 @@ uint8_t llcc68_timeout_convert_to_register(llcc68_handle_t *handle, double us, u
 
 /**
  * @brief      convert the register raw data to the timeout
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *us points to a us buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *us pointer to a us buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -1754,8 +1754,8 @@ uint8_t llcc68_timeout_convert_to_data(llcc68_handle_t *handle, uint32_t reg, do
 
 /**
  * @brief     stop timer on preamble
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set stop timer on preamble failed
@@ -1800,9 +1800,9 @@ uint8_t llcc68_set_stop_timer_on_preamble(llcc68_handle_t *handle, llcc68_bool_t
 
 /**
  * @brief     set the rx duty cycle
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] rx_period is the rx period
- * @param[in] sleep_period is the sleep period
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] rx_period rx period
+ * @param[in] sleep_period sleep period
  * @return    status code
  *            - 0 success
  *            - 1 set rx duty cycle failed
@@ -1852,7 +1852,7 @@ uint8_t llcc68_set_rx_duty_cycle(llcc68_handle_t *handle, uint32_t rx_period, ui
 
 /**
  * @brief     run the cad
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set cad failed
@@ -1895,7 +1895,7 @@ uint8_t llcc68_set_cad(llcc68_handle_t *handle)
 
 /**
  * @brief     enter to the tx continuous wave mode
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set tx continuous wave failed
@@ -1938,7 +1938,7 @@ uint8_t llcc68_set_tx_continuous_wave(llcc68_handle_t *handle)
 
 /**
  * @brief     enter to the tx infinite preamble mode
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set tx infinite preamble failed
@@ -1981,8 +1981,8 @@ uint8_t llcc68_set_tx_infinite_preamble(llcc68_handle_t *handle)
 
 /**
  * @brief     set the regulator_mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] mode is the regulator mode
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] mode regulator mode
  * @return    status code
  *            - 0 success
  *            - 1 set regulator mode failed
@@ -2027,8 +2027,8 @@ uint8_t llcc68_set_regulator_mode(llcc68_handle_t *handle, llcc68_regulator_mode
 
 /**
  * @brief     set the calibration settings
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] settings is the calibration param
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] settings calibration param
  * @return    status code
  *            - 0 success
  *            - 1 set calibration failed
@@ -2073,9 +2073,9 @@ uint8_t llcc68_set_calibration(llcc68_handle_t *handle, uint8_t settings)
 
 /**
  * @brief     set the calibration image frequency
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] freq1 is the image frequency 1
- * @param[in] freq2 is the image frequency 2
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] freq1 image frequency 1
+ * @param[in] freq2 image frequency 2
  * @return    status code
  *            - 0 success
  *            - 1 set calibration image failed
@@ -2121,9 +2121,9 @@ uint8_t llcc68_set_calibration_image(llcc68_handle_t *handle, uint8_t freq1, uin
 
 /**
  * @brief     set the pa config
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] pa_duty_cycle is the pa duty cycle
- * @param[in] hp_max is the max power
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] pa_duty_cycle pa duty cycle
+ * @param[in] hp_max max power
  * @return    status code
  *            - 0 success
  *            - 1 set the pa config failed
@@ -2171,8 +2171,8 @@ uint8_t llcc68_set_pa_config(llcc68_handle_t *handle, uint8_t pa_duty_cycle, uin
 
 /**
  * @brief     set the rx tx fallback mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] mode is the rx tx fallback mode
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] mode rx tx fallback mode
  * @return    status code
  *            - 0 success
  *            - 1 set rx tx fallback mode failed
@@ -2217,11 +2217,11 @@ uint8_t llcc68_set_rx_tx_fallback_mode(llcc68_handle_t *handle, llcc68_rx_tx_fal
 
 /**
  * @brief     set the dio irq params
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] irq_mask is the irq mask
- * @param[in] dio1_mask is the dio1 mask
- * @param[in] dio2_mask is the dio2 mask
- * @param[in] dio3_mask is the dio3 mask
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] irq_mask irq mask
+ * @param[in] dio1_mask dio1 mask
+ * @param[in] dio2_mask dio2 mask
+ * @param[in] dio3_mask dio3 mask
  * @return    status code
  *            - 0 success
  *            - 1 set dio irq params failed
@@ -2275,8 +2275,8 @@ uint8_t llcc68_set_dio_irq_params(llcc68_handle_t *handle, uint16_t irq_mask, ui
 
 /**
  * @brief      get the irq status
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get irq status failed
@@ -2321,8 +2321,8 @@ uint8_t llcc68_get_irq_status(llcc68_handle_t *handle, uint16_t *status)
 
 /**
  * @brief     clear the irq status
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] clear_irq_param is the irq mask
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] clear_irq_param irq mask
  * @return    status code
  *            - 0 success
  *            - 1 clear irq status failed
@@ -2368,8 +2368,8 @@ uint8_t llcc68_clear_irq_status(llcc68_handle_t *handle, uint16_t clear_irq_para
 
 /**
  * @brief     set dio2 as rf switch ctrl
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set dio2 as rf switch ctrl failed
@@ -2414,9 +2414,9 @@ uint8_t llcc68_set_dio2_as_rf_switch_ctrl(llcc68_handle_t *handle, llcc68_bool_t
 
 /**
  * @brief     set dio3 as tcxo ctrl
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] voltage is the tcxo voltage
- * @param[in] delay is the tcxo ctrl delay
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] voltage tcxo voltage
+ * @param[in] delay tcxo ctrl delay
  * @return    status code
  *            - 0 success
  *            - 1 set dio3 as tcxo ctrl failed
@@ -2464,9 +2464,9 @@ uint8_t llcc68_set_dio3_as_tcxo_ctrl(llcc68_handle_t *handle, llcc68_tcxo_voltag
 
 /**
  * @brief      convert the frequency to the register raw data
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  freq is the frequency
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  freq frequency
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2491,9 +2491,9 @@ uint8_t llcc68_frequency_convert_to_register(llcc68_handle_t *handle, uint32_t f
 
 /**
  * @brief      convert the register raw data to the frequency
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *freq points to a frequency buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *freq pointer to a frequency buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2518,8 +2518,8 @@ uint8_t llcc68_frequency_convert_to_data(llcc68_handle_t *handle, uint32_t reg, 
 
 /**
  * @brief     set the rf frequency
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] reg is the rf frequency register data
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] reg rf frequency register data
  * @return    status code
  *            - 0 success
  *            - 1 set rf frequency failed
@@ -2567,8 +2567,8 @@ uint8_t llcc68_set_rf_frequency(llcc68_handle_t *handle, uint32_t reg)
 
 /**
  * @brief     set the packet type
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] type is the packet type
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] type packet type
  * @return    status code
  *            - 0 success
  *            - 1 set packet type failed
@@ -2613,8 +2613,8 @@ uint8_t llcc68_set_packet_type(llcc68_handle_t *handle, llcc68_packet_type_t typ
 
 /**
  * @brief      get the packet type
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *type points to a packet type buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *type pointer to a packet type buffer
  * @return     status code
  *             - 0 success
  *             - 1 get packet type failed
@@ -2659,9 +2659,9 @@ uint8_t llcc68_get_packet_type(llcc68_handle_t *handle, llcc68_packet_type_t *ty
 
 /**
  * @brief     set the tx params
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] dbm is the rf power 
- * @param[in] t is the ramp time
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] dbm rf power 
+ * @param[in] t ramp time
  * @return    status code
  *            - 0 success
  *            - 1 set tx params failed
@@ -2707,11 +2707,11 @@ uint8_t llcc68_set_tx_params(llcc68_handle_t *handle, int8_t dbm, llcc68_ramp_ti
 
 /**
  * @brief     set the modulation params in GFSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] br is the bit rate
- * @param[in] shape is the pulse shape
- * @param[in] bw is the bandwidth
- * @param[in] fdev is the frequency deviation
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] br bit rate
+ * @param[in] shape pulse shape
+ * @param[in] bw bandwidth
+ * @param[in] fdev frequency deviation
  * @return    status code
  *            - 0 success
  *            - 1 set gfsk modulation params failed
@@ -2764,9 +2764,9 @@ uint8_t llcc68_set_gfsk_modulation_params(llcc68_handle_t *handle, uint32_t br, 
 
 /**
  * @brief      convert the bit rate to the register raw data
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  br is the bit rate
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  br bit rate
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2791,9 +2791,9 @@ uint8_t llcc68_gfsk_bit_rate_convert_to_register(llcc68_handle_t *handle, uint32
 
 /**
  * @brief      convert the register raw data to the bit rate
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *br points to a bit rate buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *br pointer to a bit rate buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2818,9 +2818,9 @@ uint8_t llcc68_gfsk_bit_rate_convert_to_data(llcc68_handle_t *handle, uint32_t r
 
 /**
  * @brief      convert the frequency deviation to the register raw data
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  freq is the frequency deviation
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  freq frequency deviation
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2845,9 +2845,9 @@ uint8_t llcc68_gfsk_frequency_deviation_convert_to_register(llcc68_handle_t *han
 
 /**
  * @brief      convert the register raw data to the frequency deviation
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *freq points to a frequency deviation buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *freq pointer to a frequency deviation buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2872,11 +2872,11 @@ uint8_t llcc68_gfsk_frequency_deviation_convert_to_data(llcc68_handle_t *handle,
 
 /**
  * @brief     set the modulation params in LoRa mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] sf is the spreading factor
- * @param[in] bw is the bandwidth
- * @param[in] cr is coding rate
- * @param[in] low_data_rate_optimize_enable is a bool value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] sf spreading factor
+ * @param[in] bw bandwidth
+ * @param[in] cr coding rate
+ * @param[in] low_data_rate_optimize_enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set lora modulation params failed
@@ -2925,15 +2925,15 @@ uint8_t llcc68_set_lora_modulation_params(llcc68_handle_t *handle, llcc68_lora_s
 
 /**
  * @brief     set the packet params in GFSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] preamble_length is the preamble length
- * @param[in] detector_length is the preamble detector length
- * @param[in] sync_word_length is the sync word length
- * @param[in] filter is the address filter
- * @param[in] packet_type is the packet type
- * @param[in] payload_length is the length of the payload
- * @param[in] crc_type is the crc type
- * @param[in] whitening_enable is a bool value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] preamble_length preamble length
+ * @param[in] detector_length preamble detector length
+ * @param[in] sync_word_length sync word length
+ * @param[in] filter address filter
+ * @param[in] packet_type packet type
+ * @param[in] payload_length length of the payload
+ * @param[in] crc_type crc type
+ * @param[in] whitening_enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set gfsk packet params failed
@@ -2997,12 +2997,12 @@ uint8_t llcc68_set_gfsk_packet_params(llcc68_handle_t *handle, uint16_t preamble
 
 /**
  * @brief     set the packet params in LoRa mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] preamble_length is the preamble length
- * @param[in] header_type is the header type
- * @param[in] payload_length is the length of payload
- * @param[in] crc_type is the crc type
- * @param[in] invert_iq_enable is a bool value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] preamble_length preamble length
+ * @param[in] header_type header type
+ * @param[in] payload_length length of payload
+ * @param[in] crc_type crc type
+ * @param[in] invert_iq_enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set lora packet params failed
@@ -3054,12 +3054,12 @@ uint8_t llcc68_set_lora_packet_params(llcc68_handle_t *handle, uint16_t preamble
 
 /**
  * @brief     set the cad params
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] num is the cad symbol number
- * @param[in] cad_det_peak is the cad detection peak
- * @param[in] cad_det_min is the min cad detection peak 
- * @param[in] mode is the cad exit mode
- * @param[in] timeout is the cad timeout
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] num cad symbol number
+ * @param[in] cad_det_peak cad detection peak
+ * @param[in] cad_det_min min cad detection peak 
+ * @param[in] mode cad exit mode
+ * @param[in] timeout cad timeout
  * @return    status code
  *            - 0 success
  *            - 1 set cad params failed
@@ -3112,9 +3112,9 @@ uint8_t llcc68_set_cad_params(llcc68_handle_t *handle, llcc68_lora_cad_symbol_nu
 
 /**
  * @brief     set the buffer base address
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] tx_base_addr is the tx base address
- * @param[in] rx_base_addr is the rx base address
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] tx_base_addr tx base address
+ * @param[in] rx_base_addr rx base address
  * @return    status code
  *            - 0 success
  *            - 1 set buffer base address failed
@@ -3160,8 +3160,8 @@ uint8_t llcc68_set_buffer_base_address(llcc68_handle_t *handle, uint8_t tx_base_
 
 /**
  * @brief     set the lora symbol number timeout
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] symb_num is the symbol number
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] symb_num symbol number
  * @return    status code
  *            - 0 success
  *            - 1 set lora symb num timeout failed
@@ -3206,8 +3206,8 @@ uint8_t llcc68_set_lora_symb_num_timeout(llcc68_handle_t *handle, uint8_t symb_n
 
 /**
  * @brief      get the status
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -3253,9 +3253,9 @@ uint8_t llcc68_get_status(llcc68_handle_t *handle, uint8_t *status)
 
 /**
  * @brief      get the rx buffer status
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *payload_length_rx points to an rx payload length buffer
- * @param[out] *rx_start_buffer_pointer points to an rx start pointer buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *payload_length_rx pointer to an rx payload length buffer
+ * @param[out] *rx_start_buffer_pointer pointer to an rx start pointer buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rx buffer status failed
@@ -3301,12 +3301,12 @@ uint8_t llcc68_get_rx_buffer_status(llcc68_handle_t *handle, uint8_t *payload_le
 
 /**
  * @brief      get the packet status in GFSK mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *rx_status points to an rx status buffer
- * @param[out] *rssi_sync_raw points to an rssi sync raw buffer
- * @param[out] *rssi_avg_raw points to an rssi avg raw buffer
- * @param[out] *rssi_sync points to an rssi sync buffer
- * @param[out] *rssi_avg points to an rssi avg buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *rx_status pointer to an rx status buffer
+ * @param[out] *rssi_sync_raw pointer to an rssi sync raw buffer
+ * @param[out] *rssi_avg_raw pointer to an rssi avg raw buffer
+ * @param[out] *rssi_sync pointer to an rssi sync buffer
+ * @param[out] *rssi_avg pointer to an rssi avg buffer
  * @return     status code
  *             - 0 success
  *             - 1 get gfsk packet status failed
@@ -3356,13 +3356,13 @@ uint8_t llcc68_get_gfsk_packet_status(llcc68_handle_t *handle, uint8_t *rx_statu
 
 /**
  * @brief      get the packet status in LoRa mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *rssi_pkt_raw points to an rssi packet raw buffer
- * @param[out] *snr_pkt_raw points to an snr packet raw buffer
- * @param[out] *signal_rssi_pkt_raw points to a signal rssi packet raw buffer
- * @param[out] *rssi_pkt points to an rssi packet buffer
- * @param[out] *snr_pkt points to an snr packet buffer
- * @param[out] *signal_rssi_pkt points to a signal rssi packet buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *rssi_pkt_raw pointer to an rssi packet raw buffer
+ * @param[out] *snr_pkt_raw pointer to an snr packet raw buffer
+ * @param[out] *signal_rssi_pkt_raw pointer to a signal rssi packet raw buffer
+ * @param[out] *rssi_pkt pointer to an rssi packet buffer
+ * @param[out] *snr_pkt pointer to an snr packet buffer
+ * @param[out] *signal_rssi_pkt pointer to a signal rssi packet buffer
  * @return     status code
  *             - 0 success
  *             - 1 get lora packet status failed
@@ -3413,9 +3413,9 @@ uint8_t llcc68_get_lora_packet_status(llcc68_handle_t *handle, uint8_t *rssi_pkt
 
 /**
  * @brief      get the instantaneous rssi
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *rssi_inst_raw points to an rssi instantaneous raw buffer
- * @param[out] *rssi_inst points to an rssi instantaneous buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *rssi_inst_raw pointer to an rssi instantaneous raw buffer
+ * @param[out] *rssi_inst pointer to an rssi instantaneous buffer
  * @return     status code
  *             - 0 success
  *             - 1 get instantaneous rssi failed
@@ -3461,10 +3461,10 @@ uint8_t llcc68_get_instantaneous_rssi(llcc68_handle_t *handle, uint8_t *rssi_ins
 
 /**
  * @brief      get the stats
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *pkt_received points to a packet received counter buffer
- * @param[out] *pkt_crc_error points to a packet crc error buffer
- * @param[out] *pkt_length_header_error points to a packet length header error buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *pkt_received pointer to a packet received counter buffer
+ * @param[out] *pkt_crc_error pointer to a packet crc error buffer
+ * @param[out] *pkt_length_header_error pointer to a packet length header error buffer
  * @return     status code
  *             - 0 success
  *             - 1 get stats failed
@@ -3511,10 +3511,10 @@ uint8_t llcc68_get_stats(llcc68_handle_t *handle, uint16_t *pkt_received, uint16
 
 /**
  * @brief     reset the stats
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] pkt_received is the received packet counter mask
- * @param[in] pkt_crc_error is the packet crc error mask
- * @param[in] pkt_length_header_error is the packet length header error mask
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] pkt_received received packet counter mask
+ * @param[in] pkt_crc_error packet crc error mask
+ * @param[in] pkt_length_header_error packet length header error mask
  * @return    status code
  *            - 0 success
  *            - 1 reset stats failed
@@ -3564,8 +3564,8 @@ uint8_t llcc68_reset_stats(llcc68_handle_t *handle, uint16_t pkt_received, uint1
 
 /**
  * @brief      get the device errors
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *op_error points to an op error buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *op_error pointer to an op error buffer
  * @return     status code
  *             - 0 success
  *             - 1 get device errors failed
@@ -3610,7 +3610,7 @@ uint8_t llcc68_get_device_errors(llcc68_handle_t *handle, uint16_t *op_error)
 
 /**
  * @brief     clear the device errors
- * @param[in] *handle points to an llcc68 handle structure
+ * @param[in] *handle pointer to an llcc68 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 clear device errors failed
@@ -3656,8 +3656,8 @@ uint8_t llcc68_clear_device_errors(llcc68_handle_t *handle)
 
 /**
  * @brief     set the whitening initial value in FSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] value is the set value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] value set value
  * @return    status code
  *            - 0 success
  *            - 1 set fsk whitening initial value failed
@@ -3703,8 +3703,8 @@ uint8_t llcc68_set_fsk_whitening_initial_value(llcc68_handle_t *handle, uint16_t
 
 /**
  * @brief      get the whitening initial value in FSK mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *value points to a value buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *value pointer to a value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fsk whitening initial value failed
@@ -3749,8 +3749,8 @@ uint8_t llcc68_get_fsk_whitening_initial_value(llcc68_handle_t *handle, uint16_t
 
 /**
  * @brief     set the crc initial value in FSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] value is the set value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] value set value
  * @return    status code
  *            - 0 success
  *            - 1 set fsk crc initial value failed
@@ -3796,8 +3796,8 @@ uint8_t llcc68_set_fsk_crc_initical_value(llcc68_handle_t *handle, uint16_t valu
 
 /**
  * @brief      get the crc initical value in FSK mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *value points to a value buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *value pointer to a value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fsk crc initical value failed
@@ -3842,8 +3842,8 @@ uint8_t llcc68_get_fsk_crc_initical_value(llcc68_handle_t *handle, uint16_t *val
 
 /**
  * @brief     set the crc polynomial value in FSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] value is the set value
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] value set value
  * @return    status code
  *            - 0 success
  *            - 1 set fsk crc polynomial value failed
@@ -3889,8 +3889,8 @@ uint8_t llcc68_set_fsk_crc_polynomial_value(llcc68_handle_t *handle, uint16_t va
 
 /**
  * @brief      get the crc polynomial value in FSK mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *value points to a value buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *value pointer to a value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fsk crc polynomial value failed
@@ -3935,8 +3935,8 @@ uint8_t llcc68_get_fsk_crc_polynomial_value(llcc68_handle_t *handle, uint16_t *v
 
 /**
  * @brief     set the sync word in FSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] *sync_word points to sync word buffer
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] *sync_word pointer to sync word buffer
  * @return    status code
  *            - 0 success
  *            - 1 set fsk sync word failed
@@ -3979,8 +3979,8 @@ uint8_t llcc68_set_fsk_sync_word(llcc68_handle_t *handle, uint8_t sync_word[8])
 
 /**
  * @brief      get the sync word in FSK mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *sync_word points to sync word buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *sync_word pointer to sync word buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fsk sync word failed
@@ -4023,8 +4023,8 @@ uint8_t llcc68_get_fsk_sync_word(llcc68_handle_t *handle, uint8_t sync_word[8])
 
 /**
  * @brief     set the node address in FSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] addr is the node address
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] addr node address
  * @return    status code
  *            - 0 success
  *            - 1 set fsk node address failed
@@ -4067,8 +4067,8 @@ uint8_t llcc68_set_fsk_node_address(llcc68_handle_t *handle, uint8_t addr)
 
 /**
  * @brief      get the node address in FSK mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *addr points to a node address buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *addr pointer to a node address buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fsk node address failed
@@ -4111,8 +4111,8 @@ uint8_t llcc68_get_fsk_node_address(llcc68_handle_t *handle, uint8_t *addr)
 
 /**
  * @brief     set the broadcast address in FSK mode
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] addr is the broadcast address
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] addr broadcast address
  * @return    status code
  *            - 0 success
  *            - 1 set fsk broadcast address failed
@@ -4155,8 +4155,8 @@ uint8_t llcc68_set_fsk_broadcast_address(llcc68_handle_t *handle, uint8_t addr)
 
 /**
  * @brief      get the broadcast address in FSK mode
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *addr points to a broadcast address buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *addr pointer to a broadcast address buffer
  * @return     status code
  *             - 0 success
  *             - 1 get fsk broadcast address failed
@@ -4199,8 +4199,8 @@ uint8_t llcc68_get_fsk_broadcast_address(llcc68_handle_t *handle, uint8_t *addr)
 
 /**
  * @brief     set the iq polarity
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] setup is the settings
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] setup settings
  * @return    status code
  *            - 0 success
  *            - 1 set iq polarity failed
@@ -4243,8 +4243,8 @@ uint8_t llcc68_set_iq_polarity(llcc68_handle_t *handle, uint8_t setup)
 
 /**
  * @brief      get the iq polarity
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *setup points to a settings buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *setup pointer to a settings buffer
  * @return     status code
  *             - 0 success
  *             - 1 get iq polarity failed
@@ -4287,8 +4287,8 @@ uint8_t llcc68_get_iq_polarity(llcc68_handle_t *handle, uint8_t *setup)
 
 /**
  * @brief     set the lora sync word
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] sync_word is the sync word
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] sync_word sync word
  * @return    status code
  *            - 0 success
  *            - 1 set lora sync word failed
@@ -4334,8 +4334,8 @@ uint8_t llcc68_set_lora_sync_word(llcc68_handle_t *handle, uint16_t sync_word)
 
 /**
  * @brief      get the lora sync word
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *sync_word points to an sync word buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *sync_word pointer to an sync word buffer
  * @return     status code
  *             - 0 success
  *             - 1 get lora sync word failed
@@ -4380,8 +4380,8 @@ uint8_t llcc68_get_lora_sync_word(llcc68_handle_t *handle, uint16_t *sync_word)
 
 /**
  * @brief      get the random number
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *r points to a random number buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *r pointer to a random number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get random number failed
@@ -4427,8 +4427,8 @@ uint8_t llcc68_get_random_number(llcc68_handle_t *handle, uint32_t *r)
 
 /**
  * @brief     set the tx modulation
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] modulation is the tx modulation
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] modulation tx modulation
  * @return    status code
  *            - 0 success
  *            - 1 set tx modulation failed
@@ -4471,8 +4471,8 @@ uint8_t llcc68_set_tx_modulation(llcc68_handle_t *handle, uint8_t modulation)
 
 /**
  * @brief      get the tx modulation
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *modulation points to a tx modulation buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *modulation pointer to a tx modulation buffer
  * @return     status code
  *             - 0 success
  *             - 1 get tx modulation failed
@@ -4515,8 +4515,8 @@ uint8_t llcc68_get_tx_modulation(llcc68_handle_t *handle, uint8_t *modulation)
 
 /**
  * @brief     set the rx gain
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] gain is the rx gain
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] gain rx gain
  * @return    status code
  *            - 0 success
  *            - 1 set rx gain failed
@@ -4559,8 +4559,8 @@ uint8_t llcc68_set_rx_gain(llcc68_handle_t *handle, uint8_t gain)
 
 /**
  * @brief      get the rx gain
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *gain points to an rx gain buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *gain pointer to an rx gain buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rx gain failed
@@ -4603,8 +4603,8 @@ uint8_t llcc68_get_rx_gain(llcc68_handle_t *handle, uint8_t *gain)
 
 /**
  * @brief     set the tx clamp config
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] config is the tx clamp config
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] config tx clamp config
  * @return    status code
  *            - 0 success
  *            - 1 set tx clamp config failed
@@ -4647,8 +4647,8 @@ uint8_t llcc68_set_tx_clamp_config(llcc68_handle_t *handle, uint8_t config)
 
 /**
  * @brief      get the tx clamp config
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *config points to a tx clamp config buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *config pointer to a tx clamp config buffer
  * @return     status code
  *             - 0 success
  *             - 1 get tx clamp config failed
@@ -4691,8 +4691,8 @@ uint8_t llcc68_get_tx_clamp_config(llcc68_handle_t *handle, uint8_t *config)
 
 /**
  * @brief     set the ocp
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] ocp is the over current protection level
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] ocp over current protection level
  * @return    status code
  *            - 0 success
  *            - 1 set ocp failed
@@ -4735,8 +4735,8 @@ uint8_t llcc68_set_ocp(llcc68_handle_t *handle, uint8_t ocp)
 
 /**
  * @brief      get the ocp
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *ocp points to an over current protection level buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *ocp pointer to an over current protection level buffer
  * @return     status code
  *             - 0 success
  *             - 1 get ocp failed
@@ -4779,8 +4779,8 @@ uint8_t llcc68_get_ocp(llcc68_handle_t *handle, uint8_t *ocp)
 
 /**
  * @brief     set the rtc control
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] control is the rtc control
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] control rtc control
  * @return    status code
  *            - 0 success
  *            - 1 set rtc control failed
@@ -4823,8 +4823,8 @@ uint8_t llcc68_set_rtc_control(llcc68_handle_t *handle, uint8_t control)
 
 /**
  * @brief      get the rtc control
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *control points to an rtc control buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *control pointer to an rtc control buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rtc control failed
@@ -4867,8 +4867,8 @@ uint8_t llcc68_get_rtc_control(llcc68_handle_t *handle, uint8_t *control)
 
 /**
  * @brief     set the xta trim
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] trim is the xta trim
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] trim xta trim
  * @return    status code
  *            - 0 success
  *            - 1 set xta trim failed
@@ -4911,8 +4911,8 @@ uint8_t llcc68_set_xta_trim(llcc68_handle_t *handle, uint8_t trim)
 
 /**
  * @brief      get the xta trim
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *trim points to an xta trim buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *trim pointer to an xta trim buffer
  * @return     status code
  *             - 0 success
  *             - 1 get xta trim failed
@@ -4955,8 +4955,8 @@ uint8_t llcc68_get_xta_trim(llcc68_handle_t *handle, uint8_t *trim)
 
 /**
  * @brief     set the xtb trim
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] trim is the xtb trim
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] trim xtb trim
  * @return    status code
  *            - 0 success
  *            - 1 set xtb trim failed
@@ -4999,8 +4999,8 @@ uint8_t llcc68_set_xtb_trim(llcc68_handle_t *handle, uint8_t trim)
 
 /**
  * @brief      get the xtb trim
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *trim points to an xtb trim buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *trim pointer to an xtb trim buffer
  * @return     status code
  *             - 0 success
  *             - 1 get xtb trim failed
@@ -5043,8 +5043,8 @@ uint8_t llcc68_get_xtb_trim(llcc68_handle_t *handle, uint8_t *trim)
 
 /**
  * @brief     set the dio3 output
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] control is the dio3 output control
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] control dio3 output control
  * @return    status code
  *            - 0 success
  *            - 1 set dio3 output control failed
@@ -5087,8 +5087,8 @@ uint8_t llcc68_set_dio3_output_control(llcc68_handle_t *handle, uint8_t control)
 
 /**
  * @brief      get the dio3 output
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *control points to a dio3 output control buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *control pointer to a dio3 output control buffer
  * @return     status code
  *             - 0 success
  *             - 1 get dio3 output control failed
@@ -5131,8 +5131,8 @@ uint8_t llcc68_get_dio3_output_control(llcc68_handle_t *handle, uint8_t *control
 
 /**
  * @brief     set the event mask
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] mask is the event mask
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] mask event mask
  * @return    status code
  *            - 0 success
  *            - 1 set event mask failed
@@ -5175,8 +5175,8 @@ uint8_t llcc68_set_event_mask(llcc68_handle_t *handle, uint8_t mask)
 
 /**
  * @brief      get the event mask
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *mask points to an event mask buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *mask pointer to an event mask buffer
  * @return     status code
  *             - 0 success
  *             - 1 get event mask failed
@@ -5219,8 +5219,8 @@ uint8_t llcc68_get_event_mask(llcc68_handle_t *handle, uint8_t *mask)
 
 /**
  * @brief     set the dio output enable
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] enable is the enable settings
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] enable enable settings
  * @return    status code
  *            - 0 success
  *            - 1 set dio output enable failed
@@ -5263,8 +5263,8 @@ uint8_t llcc68_set_dio_output_enable(llcc68_handle_t *handle, uint8_t enable)
 
 /**
  * @brief      get the dio output enable
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *enable points to an enable settings buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *enable pointer to an enable settings buffer
  * @return     status code
  *             - 0 success
  *             - 1 get dio output enable failed
@@ -5307,8 +5307,8 @@ uint8_t llcc68_get_dio_output_enable(llcc68_handle_t *handle, uint8_t *enable)
 
 /**
  * @brief     set the dio input enable
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] enable is the enable settings
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] enable enable settings
  * @return    status code
  *            - 0 success
  *            - 1 set dio input enable failed
@@ -5351,8 +5351,8 @@ uint8_t llcc68_set_dio_input_enable(llcc68_handle_t *handle, uint8_t enable)
 
 /**
  * @brief      get the dio input enable
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *enable points to an enable settings buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *enable pointer to an enable settings buffer
  * @return     status code
  *             - 0 success
  *             - 1 get dio input enable failed
@@ -5395,8 +5395,8 @@ uint8_t llcc68_get_dio_input_enable(llcc68_handle_t *handle, uint8_t *enable)
 
 /**
  * @brief     set the pull up control
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] control is the pull up control
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] control pull up control
  * @return    status code
  *            - 0 success
  *            - 1 set pull up control failed
@@ -5439,8 +5439,8 @@ uint8_t llcc68_set_pull_up_control(llcc68_handle_t *handle, uint8_t control)
 
 /**
  * @brief      get the pull up control
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *control points to a pull up control buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *control pointer to a pull up control buffer
  * @return     status code
  *             - 0 success
  *             - 1 get pull up control failed
@@ -5483,8 +5483,8 @@ uint8_t llcc68_get_pull_up_control(llcc68_handle_t *handle, uint8_t *control)
 
 /**
  * @brief     set the pull down control
- * @param[in] *handle points to an llcc68 handle structure
- * @param[in] control is the pull down control
+ * @param[in] *handle pointer to an llcc68 handle structure
+ * @param[in] control pull down control
  * @return    status code
  *            - 0 success
  *            - 1 set pull down control failed
@@ -5527,8 +5527,8 @@ uint8_t llcc68_set_pull_down_control(llcc68_handle_t *handle, uint8_t control)
 
 /**
  * @brief      get the pull down control
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[out] *control points to a pull down control buffer
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[out] *control pointer to a pull down control buffer
  * @return     status code
  *             - 0 success
  *             - 1 get pull down control failed
@@ -5571,11 +5571,11 @@ uint8_t llcc68_get_pull_down_control(llcc68_handle_t *handle, uint8_t *control)
 
 /**
  * @brief      write and read register
- * @param[in]  *handle points to an llcc68 handle structure
- * @param[in]  *in_buf points to an input buffer
- * @param[in]  in_len is the input length
- * @param[out] *out_buf points to an output buffer
- * @param[in]  out_len is the output length
+ * @param[in]  *handle pointer to an llcc68 handle structure
+ * @param[in]  *in_buf pointer to an input buffer
+ * @param[in]  in_len input length
+ * @param[out] *out_buf pointer to an output buffer
+ * @param[in]  out_len output length
  * @return     status code
  *             - 0 success
  *             - 1 write read failed
@@ -5608,7 +5608,7 @@ uint8_t llcc68_write_read_reg(llcc68_handle_t *handle, uint8_t *in_buf, uint32_t
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an llcc68 info structure
+ * @param[out] *info pointer to an llcc68 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
