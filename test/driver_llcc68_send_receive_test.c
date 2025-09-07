@@ -62,7 +62,7 @@ static void a_callback(uint16_t type, uint8_t *buf, uint16_t len)
             uint16_t i;
             llcc68_bool_t enable;
             uint8_t rssi_pkt_raw;
-            uint8_t snr_pkt_raw;
+            int8_t snr_pkt_raw;
             uint8_t signal_rssi_pkt_raw;
             float rssi_pkt;
             float snr_pkt;
@@ -71,7 +71,7 @@ static void a_callback(uint16_t type, uint8_t *buf, uint16_t len)
             llcc68_interface_debug_print("llcc68: irq rx done.\n");
             
             /* get the status */
-            if (llcc68_get_lora_packet_status(&gs_handle, (uint8_t *)&rssi_pkt_raw, (uint8_t *)&snr_pkt_raw,
+            if (llcc68_get_lora_packet_status(&gs_handle, (uint8_t *)&rssi_pkt_raw, (int8_t *)&snr_pkt_raw,
                                              (uint8_t *)&signal_rssi_pkt_raw, (float *)&rssi_pkt,
                                              (float *)&snr_pkt, (float *)&signal_rssi_pkt) != 0)
             {
