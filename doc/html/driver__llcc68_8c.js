@@ -107,7 +107,7 @@ var driver__llcc68_8c =
     [ "llcc68_get_instantaneous_rssi", "group__llcc68__command__driver.html#ga3c865bda3db4e9d4e7ec6a1c717abc53", null ],
     [ "llcc68_get_iq_polarity", "group__llcc68__register__driver.html#ga5c376f40c0218f3c68b4fa752125354d", null ],
     [ "llcc68_get_irq_status", "group__llcc68__command__driver.html#gabb9841c807ac928734aedce5456e072b", null ],
-    [ "llcc68_get_lora_packet_status", "group__llcc68__command__driver.html#ga25b80121705fa39ee4110b36c1065d1e", null ],
+    [ "llcc68_get_lora_packet_status", "group__llcc68__command__driver.html#gac609037670d6a32e2db559b1244ba040", null ],
     [ "llcc68_get_lora_sync_word", "group__llcc68__register__driver.html#gaa7b72f4bcf14a905a798b5e7a50d7c36", null ],
     [ "llcc68_get_ocp", "group__llcc68__register__driver.html#gaf64a881e8af2987b8abfb6bd5a43b533", null ],
     [ "llcc68_get_packet_type", "group__llcc68__command__driver.html#ga39f106884add0e123cd4f24c451c6df8", null ],

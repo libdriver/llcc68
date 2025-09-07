@@ -224,7 +224,7 @@ var group__llcc68__command__driver =
     [ "llcc68_get_gfsk_packet_status", "group__llcc68__command__driver.html#ga2a0e71c6e1713e9424e03e67f65e7d9e", null ],
     [ "llcc68_get_instantaneous_rssi", "group__llcc68__command__driver.html#ga3c865bda3db4e9d4e7ec6a1c717abc53", null ],
     [ "llcc68_get_irq_status", "group__llcc68__command__driver.html#gabb9841c807ac928734aedce5456e072b", null ],
-    [ "llcc68_get_lora_packet_status", "group__llcc68__command__driver.html#ga25b80121705fa39ee4110b36c1065d1e", null ],
+    [ "llcc68_get_lora_packet_status", "group__llcc68__command__driver.html#gac609037670d6a32e2db559b1244ba040", null ],
     [ "llcc68_get_packet_type", "group__llcc68__command__driver.html#ga39f106884add0e123cd4f24c451c6df8", null ],
     [ "llcc68_get_rx_buffer_status", "group__llcc68__command__driver.html#ga6b820431b0db0d54a66a843a223f235f", null ],
     [ "llcc68_get_stats", "group__llcc68__command__driver.html#gac22e552985c8d0a71d7544210a658e9d", null ],

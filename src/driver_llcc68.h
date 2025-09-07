@@ -1376,7 +1376,7 @@ uint8_t llcc68_get_gfsk_packet_status(llcc68_handle_t *handle, uint8_t *rx_statu
  *             - 4 chip is busy
  * @note       none
  */
-uint8_t llcc68_get_lora_packet_status(llcc68_handle_t *handle, uint8_t *rssi_pkt_raw, uint8_t *snr_pkt_raw,
+uint8_t llcc68_get_lora_packet_status(llcc68_handle_t *handle, uint8_t *rssi_pkt_raw, int8_t *snr_pkt_raw,
                                       uint8_t *signal_rssi_pkt_raw, float *rssi_pkt, float *snr_pkt, float *signal_rssi_pkt);
 
 /**

@@ -10,7 +10,7 @@
 
 The LLCC68 sub-GHz radio transceiver is ideal for long range wireless applications. It is designed for long battery life with just 4.2 mA of active receive current consumption.The LLCC68 can transmit up to +22 dBm with highly efficient integrated power amplifiers.The LLCC68 supports LoRa® modulation for LPWAN use cases and (G)FSK modulation for legacy use cases. It is highly configurable to meet different application requirements for industry and consumer use.The device provides LoRa® modulation compatible with Semtech transceivers used by the LoRaWAN™ specification released by the LoRa Alliance™.The radio is suitable for systems targeting compliance with radio regulations including but not limited to ETSI EN 300 220, FCC CFR 47 Part 15, China regulatory requirements and the Japanese ARIB T-108. Continuous frequency coverage from 150 MHz to 960 MHz allows the support of all major sub-GHz ISM bands around the world.LLCC68 can be used in smart meters, supply chain and logistics, building automation and so on.
 
-LibDriver LLCC68 is a full-featured driver of LLCC68 launched by LibDriver.It provides functions of wireless senting, wireless receiving, cad, etc. LibDriver is MISRA compliant.
+LibDriver LLCC68 is a full-featured driver for LLCC68, launched by LibDriver.It provides wireless sending, wireless receiving, cad and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
