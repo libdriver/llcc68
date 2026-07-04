@@ -488,7 +488,7 @@ uint8_t llcc68_irq_handler(llcc68_handle_t *handle)
         uint8_t mask;
         
         control = 0x00;
-        res = a_llcc68_spi_write_register(handle, LLCC68_REG_DIO3_OUTPUT_CONTROL, (uint8_t *)&control, 1);     /* write register */
+        res = a_llcc68_spi_write_register(handle, LLCC68_REG_RTC_CONTROL, (uint8_t *)&control, 1);             /* write register */
         if (res != 0)                                                                                          /* check result */
         {
             handle->debug_print("llcc68: write register failed.\n");                                           /* write register failed */

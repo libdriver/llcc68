@@ -1,3 +1,9 @@
+## 1.0.12 (2026-07-05)
+
+## Bug Fixes
+
+- fix timeout bugs
+
 ## 1.0.11 (2025-10-26)
 
 ## Features
